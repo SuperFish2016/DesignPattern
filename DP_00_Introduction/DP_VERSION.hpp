@@ -10,13 +10,9 @@ public:
 };
 
 struct Point{
-    int x;
-    int y;
+    int x; int y;
     Point():x(0),y(0){}
-    Point(int x1, int y1):x(x1), y(y1)
-    {
-        std::cout << "Point(int x1, int y1) Ctor." << std::endl;
-    }
+    Point(int x1, int y1):x(x1), y(y1){ std::cout << "Point(int x1, int y1) Ctor." << std::endl;}
 };
 
 struct Line : public Shape{
@@ -31,7 +27,7 @@ struct Line : public Shape{
 
     //实现自己的Draw，负责画自己
     virtual void draw(){
-        std::cout << "Line -> I am drawing myself." << std::endl;
+        std::cout << "Line: I am drawing..." << std::endl;
     }
 
 };
@@ -50,7 +46,7 @@ struct Rect : public Shape{
 
     //实现自己的Draw，负责画自己
     virtual void draw(){
-        std::cout << "Rect -> I am drawing myself." << std::endl;
+        std::cout << "Rect: I am drawing myself." << std::endl;
     }
 };
 
@@ -64,7 +60,7 @@ struct Circle : public Shape{
     }
     //实现自己的Draw，负责画自己
     virtual void draw(){
-        std::cout << "Circle -> I am drawing myself." << std::endl;
+        std::cout << "Circle: I am drawing myself." << std::endl;
     }
 };
 
@@ -81,13 +77,12 @@ public:
     }
     void paintShape()
     {
-        for(int i = 0; i < m_shapes.size(); i++)
+        for(__SIZE_TYPE__ i = 0; i < m_shapes.size(); i++)
         {
             m_shapes.at(i)->draw();
         }
     }
 };
-
 }
 
 

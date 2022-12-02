@@ -59,16 +59,16 @@ public:
     }
     void paintShape()
     {
-        for(int i = 0; i < lineVector.size(); i++)
+        for(size_t i = 0; i < lineVector.size(); i++)
         {
             std::cout <<"call system api to draw lines" << std::endl;
         }
-        for(int i = 0; i < rectVector.size(); i++)
+        for(size_t i = 0; i < rectVector.size(); i++)
         {
              std::cout <<"call system api to draw rects" << std::endl;
         }
         // Change & Add 04.
-        for(int i = 0; i < circleVececor.size(); i++)
+        for(size_t i = 0; i < circleVececor.size(); i++)
         {
             std::cout <<"call system api to draw circles" << std::endl;
         }
